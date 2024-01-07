@@ -1,13 +1,13 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "Canny extension for End-users",
     "description": "Improve usability of canny.io for end-users",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "icons": {
         "48": "/images/icon1_48.png",
         "128": "/images/icon1_128.png"
     },
-    "page_action": {
+    "action": {
         "default_icon": {
             "48": "/images/icon1_48.png",
             "128": "/images/icon1_128.png"
@@ -19,15 +19,13 @@
         "default_popup": "popup.html"
     },
     "background": {
-        "scripts": [
-            "background.js"
-        ]
+        "service_worker": "background.js",
+		"type": "module"
     },
     "options_ui": {
         "page": "options.html",
         "open_in_tab": true,
-        "browser_style": false,
-        "chrome_style": false
+        "browser_style": false
     },
     "content_scripts": [
         {
