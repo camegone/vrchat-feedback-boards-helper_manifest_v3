@@ -195,7 +195,7 @@ const fetchPostInfo = (postLink) => {
                 const scriptRex = new RegExp('<script charSet="UTF-8">window.__data = (.*?);</script>');
                 const found = text.match(scriptRex);
                 console.log('match found=', found);
-                if (found.length !== 2) {
+                if (!found || found.length !== 2) {
                     reject('failed to extract data from Canny post');
                 } else {
                     return found[1];
