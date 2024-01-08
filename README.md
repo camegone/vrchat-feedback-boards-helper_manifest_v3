@@ -1,3 +1,7 @@
+# CHANGES DONE:
+ Migrate manifest into v3
+# TODO:
+ fix errors in the javascripts
 # vrchat-feedback-boards-helper
 
 A helper tool for VRChat feedback boards on Canny.
